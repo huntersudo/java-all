@@ -1,3 +1,4 @@
+/*
 package lambdasinaction.chap10;
 
 import java.util.*;
@@ -22,3 +23,4 @@ public class OptionalMain {
                       .collect(toSet());
     }
 }
+*/

@@ -28,7 +28,9 @@ public class Summarizing {
         return menu.stream().collect(reducing((d1, d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2)).get();
     }
 
+
     private static Dish findMostCaloricDishUsingComparator() {
+
         Comparator<Dish> dishCaloriesComparator = Comparator.comparingInt(Dish::getCalories);
         BinaryOperator<Dish> moreCaloricOf = BinaryOperator.maxBy(dishCaloriesComparator);
         return menu.stream().collect(reducing(moreCaloricOf)).get();

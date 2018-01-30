@@ -1,3 +1,4 @@
+/*
 package lambdasinaction.chap10;
 
 import java.util.*;
@@ -23,3 +24,4 @@ public class OperationsWithOptional {
          return i.flatMap(a -> j.map(b -> Math.max(a, b)));
     }
 }
+*/

@@ -21,6 +21,11 @@ public class StreamBasic {
 
     }
 
+    /**
+     * lowCaloricDishes 垃圾变量
+     * @param dishes
+     * @return
+     */
     public static List<String> getLowCaloricDishesNamesInJava7(List<Dish> dishes){
         List<Dish> lowCaloricDishes = new ArrayList<>();
         for(Dish d: dishes){
@@ -40,6 +45,14 @@ public class StreamBasic {
         return lowCaloricDishesName;
     }
 
+    /**
+     * java 8,实现的细节被放到本该归属的库里
+     * (1)代码声明式方式：说明想要完成什么，而不是如何实现
+     * (2)基础操作链接起来，复合
+     * (3)可并行
+     * @param dishes
+     * @return
+     */
     public static List<String> getLowCaloricDishesNamesInJava8(List<Dish> dishes){
         return dishes.stream()
                 .filter(d -> d.getCalories() < 400)

@@ -42,6 +42,7 @@ public class Filtering{
                 .skip(2)
                 .collect(toList());
 
+
         dishesSkip2.forEach(System.out::println);
     }
 }
