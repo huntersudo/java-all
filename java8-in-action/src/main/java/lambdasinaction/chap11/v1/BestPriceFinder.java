@@ -52,6 +52,8 @@ public class BestPriceFinder {
                 .map(shop -> CompletableFuture.supplyAsync(() -> shop.getName() + " price is "
                         + shop.getPrice(product), executor))
                 .collect(Collectors.toList());
+        // 得到的是 List<CompletableFuture<String>>,要求的是
+        // 故 join方法类似于Future的get, 不像get,join不会抛出任务checked异常
 
         List<String> prices = priceFutures.stream()
                 .map(CompletableFuture::join)

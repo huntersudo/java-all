@@ -22,7 +22,9 @@ public class Grouping {
         System.out.println("Most caloric dishes by type: " + mostCaloricDishesByType());
         System.out.println("Most caloric dishes by type: " + mostCaloricDishesByTypeWithoutOprionals());
         System.out.println("Sum calories by type: " + sumCaloriesByType());
+
         System.out.println("Caloric levels by type: " + caloricLevelsByType());
+
 
     }
 
@@ -97,4 +99,5 @@ public class Grouping {
                         else return CaloricLevel.FAT; },
                         toSet() )));
     }
+
 }
