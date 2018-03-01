@@ -42,6 +42,10 @@ public class Filtering{
                 .skip(2)
                 .collect(toList());
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
         dishesSkip2.forEach(System.out::println);
     }
 }

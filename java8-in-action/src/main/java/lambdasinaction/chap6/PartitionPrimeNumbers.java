@@ -26,16 +26,32 @@ public class PartitionPrimeNumbers {
                 .noneMatch(i -> candidate % i == 0);
     }
 
+<<<<<<< HEAD
+=======
+    public static boolean isPrime1(int candidate) {
+        return IntStream.range(2, candidate)
+                .noneMatch(i -> candidate % i == 0);
+    }
+
+>>>>>>> develop
     public static Map<Boolean, List<Integer>> partitionPrimesWithCustomCollector(int n) {
         return IntStream.rangeClosed(2, n).boxed().collect(new PrimeNumbersCollector());
     }
 
     public static boolean isPrime(List<Integer> primes, Integer candidate) {
         double candidateRoot = Math.sqrt((double) candidate);
+<<<<<<< HEAD
         //return takeWhile(primes, i -> i <= candidateRoot).stream().noneMatch(i -> candidate % i == 0);
         return primes.stream().takeWhile(i -> i <= candidateRoot).noneMatch(i -> candidate % i == 0);
     }
 /*
+=======
+        return takeWhile(primes, i -> i <= candidateRoot).stream().noneMatch(i -> candidate % i == 0);
+//      return primes.stream().takeWhile(i -> i <= candidateRoot).noneMatch(i -> candidate % i == 0);
+
+    }
+
+>>>>>>> develop
     public static <A> List<A> takeWhile(List<A> list, Predicate<A> p) {
         int i = 0;
         for (A item : list) {
@@ -46,7 +62,10 @@ public class PartitionPrimeNumbers {
         }
         return list;
     }
+<<<<<<< HEAD
 */
+=======
+>>>>>>> develop
     public static class PrimeNumbersCollector
             implements Collector<Integer, Map<Boolean, List<Integer>>, Map<Boolean, List<Integer>>> {
 

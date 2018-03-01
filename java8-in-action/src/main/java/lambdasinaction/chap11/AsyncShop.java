@@ -18,19 +18,39 @@ public class AsyncShop {
     }
 
     public Future<Double> getPrice(String product) {
+<<<<<<< HEAD
 /*
         CompletableFuture<Double> futurePrice = new CompletableFuture<>();
         new Thread( () -> {
                     try {
                         double price = calculatePrice(product);
                         futurePrice.complete(price);
+=======
+
+/*
+        CompletableFuture<Double> futurePrice = new CompletableFuture<>(); // 创建CompletableFuture对象,会包含计算的结果
+        new Thread( () -> {
+                    try {
+
+                        double price = calculatePrice(product);
+                        futurePrice.complete(price);  //需长时间计算的任务结束并得出结果时，设置Future的返回值
+
+>>>>>>> develop
                     } catch (Exception ex) {
                         futurePrice.completeExceptionally(ex);
                     }
         }).start();
+<<<<<<< HEAD
         return futurePrice;
 */
         return CompletableFuture.supplyAsync(() -> calculatePrice(product));
+=======
+
+        return futurePrice;
+*/
+        return CompletableFuture.supplyAsync(() -> calculatePrice(product));
+
+>>>>>>> develop
     }
 
     private double calculatePrice(String product) {

@@ -32,7 +32,18 @@ public class Lambdas {
 			}
 		}
 		return result;
+<<<<<<< HEAD
 	}   
+=======
+	}
+
+	/**
+	 * 函数式接口:只包含一个抽象方法
+	 */
+	interface ApplePredicate{
+		public boolean test(Apple a);
+	}
+>>>>>>> develop
 
 	public static class Apple {
 		private int weight = 0;
@@ -66,8 +77,11 @@ public class Lambdas {
 					'}';
 		}
 	}
+<<<<<<< HEAD
 
 	interface ApplePredicate{
 		public boolean test(Apple a);
 	}
+=======
+>>>>>>> develop
 }

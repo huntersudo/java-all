@@ -12,6 +12,10 @@ public class Reducing{
 
         List<Integer> numbers = Arrays.asList(3,4,5,1,2);
         int sum = numbers.stream().reduce(0, (a, b) -> a + b);
+<<<<<<< HEAD
+=======
+        Optional<Integer> sum22=numbers.stream().reduce((a,b)->a+b);
+>>>>>>> develop
         System.out.println(sum);
 
         int sum2 = numbers.stream().reduce(0, Integer::sum);

@@ -13,7 +13,10 @@ public class ObserverMain {
         f.registerObserver(new LeMonde());
         f.notifyObservers("The queen said her favourite book is Java 8 in Action!");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
         Feed feedLambda = new Feed();
 
         feedLambda.registerObserver((String tweet) -> {
@@ -30,15 +33,23 @@ public class ObserverMain {
     }
 
 
+<<<<<<< HEAD
+=======
+    // 观察者
+>>>>>>> develop
     interface Observer{
         void inform(String tweet);
     }
 
+<<<<<<< HEAD
     interface Subject{
         void registerObserver(Observer o);
         void notifyObservers(String tweet);
     }
 
+=======
+    // 不同的观察者
+>>>>>>> develop
     static private class NYTimes implements Observer{
         @Override
         public void inform(String tweet) {
@@ -66,6 +77,17 @@ public class ObserverMain {
         }
     }
 
+<<<<<<< HEAD
+=======
+    // Subject 接口
+
+    interface Subject{
+        void registerObserver(Observer o);
+        void notifyObservers(String tweet);
+    }
+
+    // Subject 使用这个去通知
+>>>>>>> develop
     static private class Feed implements Subject{
         private final List<Observer> observers = new ArrayList<>();
         public void registerObserver(Observer o) {

@@ -13,9 +13,17 @@ public class NumericStreams{
         List<Integer> numbers = Arrays.asList(3,4,5,1,2);
 
         Arrays.stream(numbers.toArray()).forEach(System.out::println);
+<<<<<<< HEAD
         int calories = menu.stream()
                            .mapToInt(Dish::getCalories)
                            .sum();
+=======
+
+        int calories = menu.stream()
+                           .mapToInt(Dish::getCalories)
+                           .sum();
+
+>>>>>>> develop
         System.out.println("Number of calories:" + calories);
 
 

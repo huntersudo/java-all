@@ -8,11 +8,20 @@ import java.util.function.Supplier;
 public class FactoryMain {
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         Product p1 = ProductFactory.createProduct("loan");
 
         Supplier<Product> loanSupplier = Loan::new;
         Product p2 = loanSupplier.get();
 
+=======
+
+        Product p1 = ProductFactory.createProduct("loan");
+
+        // lambda
+        Supplier<Product> loanSupplier = Loan::new;
+        Product p2 = loanSupplier.get();
+>>>>>>> develop
         Product p3 = ProductFactory.createProductLambda("loan");
 
     }
@@ -26,7 +35,11 @@ public class FactoryMain {
                 default: throw new RuntimeException("No such product " + name);
             }
         }
+<<<<<<< HEAD
 
+=======
+        // lambda
+>>>>>>> develop
         public static Product createProductLambda(String name){
             Supplier<Product> p = map.get(name);
             if(p != null) return p.get();
@@ -39,6 +52,10 @@ public class FactoryMain {
     static private class Stock implements Product {}
     static private class Bond implements Product {}
 
+<<<<<<< HEAD
+=======
+    // lambda
+>>>>>>> develop
     final static private Map<String, Supplier<Product>> map = new HashMap<>();
     static {
         map.put("loan", Loan::new);

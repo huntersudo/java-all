@@ -4,7 +4,11 @@ import org.junit.*;
 
 import java.util.*;
 
+<<<<<<< HEAD
 import static java.util.Optional.*;
+=======
+import  java.util.Optional.*;
+>>>>>>> develop
 import static org.junit.Assert.assertEquals;
 
 public class ReadPositiveIntParam {
@@ -41,16 +45,30 @@ public class ReadPositiveIntParam {
     }
 
     public static int readDurationWithOptional(Properties props, String name) {
+<<<<<<< HEAD
         return ofNullable(props.getProperty(name))
                 .flatMap(ReadPositiveIntParam::s2i)
                 .filter(i -> i > 0).orElse(0);
+=======
+        return Optional
+                .ofNullable(props.getProperty(name))
+                .flatMap(ReadPositiveIntParam::s2i)
+                .filter(i -> i > 0)
+                .orElse(0);
+>>>>>>> develop
     }
 
     public static Optional<Integer> s2i(String s) {
         try {
+<<<<<<< HEAD
             return of(Integer.parseInt(s));
         } catch (NumberFormatException e) {
             return empty();
+=======
+            return Optional.of(Integer.parseInt(s));
+        } catch (NumberFormatException e) {
+            return Optional.empty();
+>>>>>>> develop
         }
     }
 
